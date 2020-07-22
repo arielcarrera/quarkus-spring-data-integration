@@ -22,6 +22,7 @@ So this extension aims to allow you to take the first steps... to be able to jum
 - [X] Native queries with @Query
 - [X] Named queries with @Query
 - [X] Persistable.isNew or EntityInformation.
+- [X] Slice trigers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
 
 ## Supported features
 
