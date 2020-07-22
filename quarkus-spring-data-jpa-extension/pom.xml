@@ -6,7 +6,7 @@
 
     <groupId>com.github.arielcarrera.quarkus.spring.data</groupId>
     <artifactId>quarkus-spring-data-jpa-extension-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>Spring Data Jpa Extension - Parent</name>
 
     <packaging>pom</packaging>
@@ -63,5 +63,17 @@
             <name>GitHub Ariel Carrera - Spring Data Jpa Packages</name>
             <url>https://maven.pkg.github.com/arielcarrera/spring-data-jpa-cdi</url>
         </repository>
+        <repository>
+          <id>github3</id>
+          <name>GitHub Ariel Carrera - Quarkus Spring Data Integration Packages</name>
+          <url>https://maven.pkg.github.com/arielcarrera/quarkus-spring-data-integration</url>
+        </repository>
     </repositories>
+    <distributionManagement>
+        <repository>
+          <id>github3</id>
+          <name>GitHub Ariel Carrera - Quarkus Spring Data Integration Packages</name>
+          <url>https://maven.pkg.github.com/arielcarrera/quarkus-spring-data-integration</url>
+        </repository>
+	</distributionManagement>
 </project>
