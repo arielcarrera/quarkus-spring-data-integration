@@ -2,17 +2,6 @@
 
 Quarkus extension that integrates Spring Data Jpa and provides all the features of this famous framework (No API / No Panache)! No more limits! Easy to migrate and run!
 
-## What is it?
-
-This is an extension that integrate Spring Data Jpa in Quarkus. It's intended to be a first step to migrate large projects or projects that uses features that are not supported by the current Panche Spring Data Jpa Api implementation.
-
-The mission of this project is to allow not only an easy migration of projects based on Spring Boot / Spring Data Jpa, also allow to incorporate in this way the rest of the Spring Data stack projects in less time and in a simpler way to maintain than the current solution adopted.
-
-## Known limitations
-
-It is known that the way to generate code for the implementation of Panache (Spring Data Jpa API), surely is the optimal solution, however, when we are trying to migrate from a project with Spring Data Jpa to Quarkus, many of us have had to rewrite lot of code for some unsupported features or with slight differences to how the original solution works.
-So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
-
 ## Features currently unsupported in Quarkus (Panache/Spring Data Jpa Api extension)
 
 - [X] QueryByExampleExecutor
@@ -23,6 +12,18 @@ So this extension aims to allow you to take the first steps... to be able to jum
 - [X] Named queries with @Query
 - [X] Persistable.isNew or EntityInformation.
 - [X] Slice trigers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
+
+## And What is *Quarkus Spring Data Jpa Integration* ?
+
+This is an extension that integrate Spring Data Jpa in Quarkus. It's intended to be a first step to migrate large projects or projects that uses features that are not supported by the current Panche Spring Data Jpa Api implementation.
+
+The mission of this project is to allow not only an easy migration of projects based on Spring Boot / Spring Data Jpa, also allow to incorporate in this way the rest of the Spring Data stack projects in less time and in a simpler way to maintain than the current solution adopted.
+
+## Known limitations
+
+It is known that the way to generate code for the implementation of Panache (Spring Data Jpa API), surely is the optimal solution, however, when we are trying to migrate from a project with Spring Data Jpa to Quarkus, many of us have had to rewrite lot of code for some unsupported features or with slight differences to how the original solution works.
+So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
+
 
 ## Supported features
 
