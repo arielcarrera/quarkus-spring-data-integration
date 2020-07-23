@@ -11,7 +11,7 @@ Quarkus extension that integrates Spring Data Jpa and provides all the features 
 - [X] Native queries with @Query
 - [X] Named queries with @Query
 - [X] Persistable.isNew or EntityInformation.
-- [X] Slice trigers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
+- [X] Slice triggers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
 
 ## And What is *Quarkus Spring Data Jpa Integration* ?
 
