@@ -4,30 +4,12 @@ Quarkus extension that integrates Spring Data Jpa and provides all the features 
 Migrate to Quarkus and enjoy a noticeable improvement in performance and memory consumption without losing any functionality!
 
 
-## Features currently unsupported in Quarkus (Panache/Spring Data Jpa Api extension)
-
-- [X] QueryByExampleExecutor
-- [ ] QueryDSL support
-- [X] Custom base Repository
-- [X] java.util.concurrent.Future as return types
-- [X] Native queries with @Query
-- [X] Named queries with @Query
-- [X] Persistable.isNew or EntityInformation.
-- [X] Slice triggers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
-
-## And What is *Quarkus Spring Data Jpa Integration* ?
+## What is *Quarkus Spring Data Jpa Integration* ?
 
 This is an extension that integrate Spring Data Jpa in Quarkus. It's intended to be a first step to migrate large projects or projects that uses features that are not supported by the current Panche Spring Data Jpa Api implementation.
 
 The mission of this project is to allow not only an easy migration of projects based on Spring Boot / Spring Data Jpa, also allow to incorporate in this way the rest of the Spring Data stack projects in less time and in a simpler way to maintain than the current solution adopted.
 Te
-
-## Known limitations and advantages
-
-It is known that the way to generate code for the implementation of Panache (Spring Data Jpa API), surely is the optimal solution, however, when we are trying to migrate from a project with Spring Data Jpa to Quarkus, many of us have had to rewrite lot of code for some unsupported features or with slight differences to how the original solution works.
-So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
-While the performance tests are preliminary ... it's amazing! an improvement of around 30% in throughput and a reduction of around 14% of memory consumption are shown with a default configuration and under the same load conditions.
-
 
 
 ## Supported features
@@ -74,6 +56,23 @@ While the performance tests are preliminary ... it's amazing! an improvement of 
   - [ ] RevisionRepository (not tested yet)
   - [ ] RxJava2CrudRepository (not tested yet)
   - [ ] RxJava2SortingRepository (not tested yet)
+
+## Known limitations and advantages
+
+It is known that the way to generate code for the implementation of Panache (Spring Data Jpa API), surely is the optimal solution, however, when we are trying to migrate from a project with Spring Data Jpa to Quarkus, many of us have had to rewrite lot of code for some unsupported features or with slight differences to how the original solution works.
+So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
+While the performance tests are preliminary ... it's amazing! an improvement of around 30% in throughput and a reduction of around 14% of memory consumption are shown with a default configuration and under the same load conditions.
+
+## features supported by "Quarkus Spring Data Jpa Integration" that are not supported in the Quarkus API implementation (Panache / Spring Data Jpa Api)
+
+- [X] QueryByExampleExecutor
+- [ ] QueryDSL support
+- [X] Custom base Repository
+- [X] java.util.concurrent.Future as return types
+- [X] Native queries with @Query
+- [X] Named queries with @Query
+- [X] Persistable.isNew or EntityInformation.
+- [X] Slice triggers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
 
 
 ## Source code
