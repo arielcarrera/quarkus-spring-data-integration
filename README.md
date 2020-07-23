@@ -60,7 +60,9 @@ Te
 ## Known limitations and advantages
 
 It is known that the way to generate code for the implementation of Panache (Spring Data Jpa API), surely is the optimal solution, however, when we are trying to migrate from a project with Spring Data Jpa to Quarkus, many of us have had to rewrite lot of code for some unsupported features or with slight differences to how the original solution works.
+
 So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
+
 While the performance tests are preliminary ... it's amazing! an improvement of around 30% in throughput and a reduction of around 14% of memory consumption are shown with a default configuration and under the same load conditions.
 
 ## features supported by "Quarkus Spring Data Jpa Integration" that are not supported in the Quarkus API implementation (Panache / Spring Data Jpa Api)
