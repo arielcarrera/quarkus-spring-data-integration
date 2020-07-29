@@ -5,12 +5,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @NamedQuery(name = "ItemEntity.findByUniqueValue", query = "select i from ItemEntity i where i.uniqueValue = ?1")
 @NamedQuery(name = "ItemEntity.findByUniqueValue.count", query = "select count(i) from ItemEntity i where i.uniqueValue = ?1")
 @Entity
+@Table(indexes = {
+        @Index(columnList = "value", name = "item_value_idx")})
 public class ItemEntity implements Identifiable<Integer>, Codifiable<Integer> {
 	
 	public static final int STATUS_ACTIVE = 0;
@@ -19,6 +23,7 @@ public class ItemEntity implements Identifiable<Integer>, Codifiable<Integer> {
 	@Id
 	private Integer id;
 
+	
 	private Integer value;
 	
 	private int status;

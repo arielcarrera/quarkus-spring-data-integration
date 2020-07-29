@@ -5,8 +5,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.Index;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
@@ -14,6 +16,8 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 @NamedQuery(name = "ItemEntity.findByUniqueValue", query = "select i from ItemEntity i where i.uniqueValue = ?1")
 @NamedQuery(name = "ItemEntity.findByUniqueValue.count", query = "select count(i) from ItemEntity i where i.uniqueValue = ?1")
 @Entity
+@Table(indexes = {
+        @Index(columnList = "value", name = "item_value_idx")})
 public class ItemEntity implements Identifiable<Integer>, Codifiable<Integer> {
 	
 	public static final int STATUS_ACTIVE = 0;

@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.arielcarrera.quarkus.spring.data</groupId>
-  <artifactId>quarkus-spring-data-jpa-integration-demo</artifactId>
+  <artifactId>quarkus-spring-data-jpa-api-demo</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
@@ -17,8 +17,6 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>1.6.1.Final</quarkus.platform.version>
     <surefire-plugin.version>2.22.1</surefire-plugin.version>
-    <version.spring.data.jpa>2.2.1.CDI.1</version.spring.data.jpa>
-    <version.spring.data.jpa.extension>1.0</version.spring.data.jpa.extension>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -79,19 +77,8 @@
       <artifactId>quarkus-undertow</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.github.arielcarrera.data</groupId>
-      <artifactId>spring-data-jpa-cdi</artifactId>
-      <version>${version.spring.data.jpa}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.arielcarrera.data</groupId>
-      <artifactId>spring-data-commons-cdi</artifactId>
-      <version>${version.spring.data.jpa}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.arielcarrera.quarkus.spring.data</groupId>
-      <artifactId>quarkus-spring-data-jpa-extension</artifactId>
-      <version>${version.spring.data.jpa.extension}</version>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-spring-data-jpa</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
