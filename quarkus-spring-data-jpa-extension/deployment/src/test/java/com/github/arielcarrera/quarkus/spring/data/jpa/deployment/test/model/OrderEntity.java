@@ -17,7 +17,7 @@ public class OrderEntity implements Persistable<Integer> {
 	@Id
 	private Integer id;
 
-	private Integer number;
+	private Integer orderNumber;
 
 	private String productId;
 
@@ -35,7 +35,7 @@ public class OrderEntity implements Persistable<Integer> {
 	public OrderEntity(Integer id, Integer number, String productId, String user, Double total) {
 		super();
 		this.id = id;
-		this.number = number;
+		this.orderNumber = number;
 		this.productId = productId;
 		this.user = user;
 		this.total = total;
@@ -49,12 +49,12 @@ public class OrderEntity implements Persistable<Integer> {
 		this.id = id;
 	}
 
-	public Integer getNumber() {
-		return number;
+	public Integer getOrderNumber() {
+		return orderNumber;
 	}
 
-	public void setNumber(Integer number) {
-		this.number = number;
+	public void setOrderNumber(Integer number) {
+		this.orderNumber = number;
 	}
 
 	public String getProductId() {

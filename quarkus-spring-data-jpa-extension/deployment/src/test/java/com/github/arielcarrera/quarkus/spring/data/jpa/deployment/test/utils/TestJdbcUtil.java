@@ -165,8 +165,8 @@ public class TestJdbcUtil {
 				try (PreparedStatement statement = connection.prepareStatement(
 						"INSERT INTO `OrderEntity` (`id`,`number`,`productId`,`user`, `total`) VALUES (?,?,?,?,?)")) {
 					statement.setInt(1, entity.getId());
-					if (entity.getNumber() != null) {
-						statement.setInt(2, entity.getNumber());						
+					if (entity.getOrderNumber() != null) {
+						statement.setInt(2, entity.getOrderNumber());						
 					} else {
 						statement.setNull(2, Types.NUMBER);
 					}
