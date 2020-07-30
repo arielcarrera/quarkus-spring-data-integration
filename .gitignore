@@ -28,3 +28,6 @@ hs_err_pid*
 .factorypath
 .settings
 quarkus-spring-data-jpa-extension/quarkus-spring-data-extension.code-workspace
+quarkus-spring-data-jpa-api-demo/src/main/oracle/application.properties
+quarkus-spring-data-jpa-integration-demo/src/main/oracle/application.properties
+spring-data-jpa-service/src/main/oracle/application.properties
