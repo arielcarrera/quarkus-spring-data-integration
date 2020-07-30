@@ -18,7 +18,7 @@ public class OrderEntity implements Persistable<Integer> {
 
 	private String productId;
 
-	private String user;
+	private String username;
 
 	private Double total;
 
@@ -34,7 +34,7 @@ public class OrderEntity implements Persistable<Integer> {
 		this.id = id;
 		this.orderNumber = number;
 		this.productId = productId;
-		this.user = user;
+		this.username = user;
 		this.total = total;
 	}
 
@@ -62,12 +62,12 @@ public class OrderEntity implements Persistable<Integer> {
 		this.productId = productId;
 	}
 
-	public String getUser() {
-		return user;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setUsername(String user) {
+		this.username = user;
 	}
 
 	public Double getTotal() {

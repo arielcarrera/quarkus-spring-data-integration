@@ -175,8 +175,8 @@ public class TestJdbcUtil {
 					} else {
 						statement.setNull(3, Types.STRING);
 					}
-					if (entity.getUser() != null) {
-						statement.setString(4, entity.getUser());
+					if (entity.getUsername() != null) {
+						statement.setString(4, entity.getUsername());
 					} else {
 						statement.setNull(4, Types.STRING);
 					}
