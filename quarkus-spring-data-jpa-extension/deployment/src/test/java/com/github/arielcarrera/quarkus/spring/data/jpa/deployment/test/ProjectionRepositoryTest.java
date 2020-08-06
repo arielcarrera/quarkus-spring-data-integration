@@ -48,16 +48,16 @@ public class ProjectionRepositoryTest {
     	OrderEntity order =  testUtil.putOrder(new OrderEntity(1,1,"A1","test",100D));
     	assertNotNull(order);
     	assertEquals(1, order.getId());
-    	OrderDto dto =  client.findByNumber(1);
+    	OrderDto dto =  client.findByOrderNumber(1);
     	assertNotNull(dto);
     	assertEquals(1, dto.getId());
-    	assertEquals(1, dto.getNumber());
+    	assertEquals(1, dto.getOrderNumber());
     	assertEquals(100D, dto.getTotal());
     }
     
     @Test
     public void findById_notFound() {
-    	OrderDto order =  client.findByNumber(100);
+    	OrderDto order =  client.findByOrderNumber(100);
     	assertNull(order);
     }
     
@@ -67,16 +67,16 @@ public class ProjectionRepositoryTest {
     	OrderEntity order =  testUtil.putOrder(new OrderEntity(2,2,"A2","test",200D));
     	assertNotNull(order);
     	assertEquals(2, order.getId());
-    	OrderDto dto =  client.findByNumber(2);
+    	OrderDto dto =  client.findByOrderNumber(2);
     	assertNotNull(dto);
     	assertEquals(2, dto.getId());
-    	assertEquals(2, dto.getNumber());
+    	assertEquals(2, dto.getOrderNumber());
     	assertEquals(200D, dto.getTotal());
     }
     
     @Test
     public void findDtoById_notFound() {
-    	OrderDto order =  client.findByNumber(100);
+    	OrderDto order =  client.findByOrderNumber(100);
     	assertNull(order);
     }
 }

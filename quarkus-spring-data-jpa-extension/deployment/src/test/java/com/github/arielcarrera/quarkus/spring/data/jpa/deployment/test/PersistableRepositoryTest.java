@@ -49,7 +49,7 @@ public class PersistableRepositoryTest {
     	OrderDto order =  client.save(new OrderDto(1,1,"A1"));
     	assertNotNull(order);
     	assertEquals(1, order.getId());
-    	assertEquals(1, order.getNumber());
+    	assertEquals(1, order.getOrderNumber());
     	assertEquals(200D, order.getTotal());
     }
     
@@ -61,7 +61,7 @@ public class PersistableRepositoryTest {
     	order =  client.findById(2);
     	assertNotNull(order);
     	assertEquals(2, order.getId());
-    	assertEquals(2, order.getNumber());
+    	assertEquals(2, order.getOrderNumber());
     	assertEquals(200D, order.getTotal());
     }
     

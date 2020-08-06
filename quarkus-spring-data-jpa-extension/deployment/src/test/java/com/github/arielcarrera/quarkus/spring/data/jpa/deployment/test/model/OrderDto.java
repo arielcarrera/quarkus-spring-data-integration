@@ -4,7 +4,7 @@ public class OrderDto  {
 
 	private Integer id;
 
-	private Integer number;
+	private Integer orderNumber;
 
 	private String productId;
 	
@@ -17,14 +17,14 @@ public class OrderDto  {
 	public OrderDto(Integer id, Integer number, String productId) {
 		super();
 		this.id = id;
-		this.number = number;
+		this.orderNumber = number;
 		this.productId = productId;
 	}
 	
 	public OrderDto(Integer id, Integer number, String productId, Double total) {
 		super();
 		this.id = id;
-		this.number = number;
+		this.orderNumber = number;
 		this.productId = productId;
 		this.total = total;
 	}
@@ -37,12 +37,12 @@ public class OrderDto  {
 		this.id = id;
 	}
 
-	public Integer getNumber() {
-		return number;
+	public Integer getOrderNumber() {
+		return orderNumber;
 	}
 
-	public void setNumber(Integer number) {
-		this.number = number;
+	public void setOrderNumber(Integer number) {
+		this.orderNumber = number;
 	}
 
 	public String getProductId() {

@@ -26,10 +26,10 @@ public interface OrderProjectionResource {
 	
     @GET
     @Path("/{id}")
-    OrderDto findByNumber(@PathParam("id") @NotNull Integer id);
+    OrderDto findByOrderNumber(@PathParam("id") @NotNull Integer id);
 
     @GET
     @Path("/{id}/dto")
-	OrderDto findDtoByNumber(@PathParam("id") @NotNull Integer id);
+	OrderDto findDtoByOrderNumber(@PathParam("id") @NotNull Integer id);
     
 }

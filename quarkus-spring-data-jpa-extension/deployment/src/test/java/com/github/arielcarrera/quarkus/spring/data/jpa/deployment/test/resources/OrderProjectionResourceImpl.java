@@ -18,14 +18,14 @@ public class OrderProjectionResourceImpl implements OrderProjectionResource {
 	}
 	
 	@Override
-	public OrderDto findByNumber(Integer id) {
-		 OrderProjection projection = repository.findByNumber(id);
+	public OrderDto findByOrderNumber(Integer id) {
+		 OrderProjection projection = repository.findByOrderNumber(id);
 		 if (projection == null) return null;
-		 return new OrderDto(projection.getId(), projection.getNumber(), null, projection.getTotal());
+		 return new OrderDto(projection.getId(), projection.getOrderNumber(), null, projection.getTotal());
 	}
 	
 	@Override
-	public OrderDto findDtoByNumber(Integer id) {
-		 return repository.findDtoByNumber(id);
+	public OrderDto findDtoByOrderNumber(Integer id) {
+		 return repository.findDtoByOrderNumber(id);
 	}
 }

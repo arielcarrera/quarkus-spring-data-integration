@@ -6,14 +6,14 @@
     <parent>
         <groupId>com.github.arielcarrera.quarkus.spring.data</groupId>
         <artifactId>quarkus-spring-data-jpa-extension-parent</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>quarkus-spring-data-jpa-extension</artifactId>
     <name>Spring Data Jpa Extension - Runtime</name>
     <properties>
-        <version.spring.data.jpa>2.2.1.CDI.1</version.spring.data.jpa>
+        <version.spring.data.jpa>2.3.2-CDI1</version.spring.data.jpa>
     </properties>
 
     <dependencies>
@@ -32,12 +32,12 @@
             <artifactId>quarkus-hibernate-orm</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.github.arielcarrera.data</groupId>
+            <groupId>com.github.arielcarrera.org.springframework.data</groupId>
             <artifactId>spring-data-jpa-cdi</artifactId>
             <version>${version.spring.data.jpa}</version>
         </dependency>
         <dependency>
-            <groupId>com.github.arielcarrera.data</groupId>
+            <groupId>com.github.arielcarrera.org.springframework.data</groupId>
             <artifactId>spring-data-commons-cdi</artifactId>
             <version>${version.spring.data.jpa}</version>
         </dependency>

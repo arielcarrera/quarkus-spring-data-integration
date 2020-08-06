@@ -163,10 +163,10 @@ public class TestJdbcUtil {
 		try {
 			try (Connection connection = dataSource.getConnection()) {
 				try (PreparedStatement statement = connection.prepareStatement(
-						"INSERT INTO `OrderEntity` (`id`,`number`,`productId`,`user`, `total`) VALUES (?,?,?,?,?)")) {
+						"INSERT INTO `OrderEntity` (`id`,`orderNumber`,`productId`,`username`, `total`) VALUES (?,?,?,?,?)")) {
 					statement.setInt(1, entity.getId());
-					if (entity.getNumber() != null) {
-						statement.setInt(2, entity.getNumber());						
+					if (entity.getOrderNumber() != null) {
+						statement.setInt(2, entity.getOrderNumber());						
 					} else {
 						statement.setNull(2, Types.NUMBER);
 					}
@@ -175,8 +175,8 @@ public class TestJdbcUtil {
 					} else {
 						statement.setNull(3, Types.STRING);
 					}
-					if (entity.getUser() != null) {
-						statement.setString(4, entity.getUser());
+					if (entity.getUsername() != null) {
+						statement.setString(4, entity.getUsername());
 					} else {
 						statement.setNull(4, Types.STRING);
 					}

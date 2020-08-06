@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: spring-data-jpa-demo
+  name: spring-data-jpa-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-data-jpa-demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-data-jpa-demo
+    spec:
+      containers:
+      - image: spring-data-jpa-service:1.0.0-SNAPSHOT
+        imagePullPolicy: Always
+        name: spring-data-jpa-service
+        resources:
+          limits:
+            memory: 2Gi
+            cpu: 4
+          requests:
+            memory: 2Gi
+            cpu: 4
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: spring-data-jpa-demo
+  name: spring-data-jpa-demo
+spec:
+  ports:
+  - name: 9091-9091
+    port: 9091
+    protocol: TCP
+    targetPort: 9091
+  selector:
+    app: spring-data-jpa-demo
+  type: ClusterIP
+status:
+  loadBalancer: {}
