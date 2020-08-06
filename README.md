@@ -10,6 +10,19 @@ This is an extension that integrate Spring Data Jpa in Quarkus. It's intended to
 
 The mission of this project is to allow not only an easy migration of projects based on Spring Boot / Spring Data Jpa, also allow to incorporate in this way other projects of the Spring Data stack in less time and in a simpler way to maintain.
 
+## Provides the best compatibility
+![Compatibility](./load-tests/imgs/compatibility.png)
+
+
+## Provides great performance
+![Throughput](./load-tests/imgs/throughput.png)
+
+![Number of samples](./load-tests/imgs/samples.png)
+
+
+## Provides efficient use of memory
+![Memory](./load-tests/imgs/memory.png)
+
 
 ## Supported features
 
@@ -72,6 +85,7 @@ The mission of this project is to allow not only an easy migration of projects b
   - [ ] RevisionRepository (not tested yet)
   - [ ] RxJava2CrudRepository (not tested yet)
   - [ ] RxJava2SortingRepository (not tested yet)
+
 
 ## Known limitations and advantages
 
