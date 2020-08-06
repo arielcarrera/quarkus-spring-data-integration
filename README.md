@@ -47,6 +47,16 @@ Te
 - [X] Specifications
 - [X] Persistable.isNew or EntityInformation.
 
+## Features supported by "Quarkus Spring Data Jpa Integration" (not supported in Quarkus API implementation - Panache Spring Data Jpa Api -)
+
+- [X] QueryByExampleExecutor
+- [ ] QueryDSL support
+- [X] Custom base Repository
+- [X] java.util.concurrent.Future as return types
+- [X] Native queries with @Query
+- [X] Named queries with @Query
+- [X] Persistable.isNew or EntityInformation.
+- [X] Slice triggers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
 
 ## Not tested features 
 
@@ -67,18 +77,7 @@ It is known that the way to generate code for the implementation of Panache (Spr
 
 So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
 
-While the performance tests are preliminary ... it's amazing! an improvement of around 30% in throughput and a reduction of around 14% of memory consumption are shown with a default configuration and under the same load conditions.
-
-## Features supported by "Quarkus Spring Data Jpa Integration" (not supported in Quarkus API implementation - Panache Spring Data Jpa Api -)
-
-- [X] QueryByExampleExecutor
-- [ ] QueryDSL support
-- [X] Custom base Repository
-- [X] java.util.concurrent.Future as return types
-- [X] Native queries with @Query
-- [X] Named queries with @Query
-- [X] Persistable.isNew or EntityInformation.
-- [X] Slice triggers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
+While the performance tests are preliminary... it's amazing! its performance is equal to or greater than the current implementation of Panache's Spring Data Jpa Api but without relegating the features offered by "Spring Data Jpa"! Quarkus with this extension provides an improvement of around 30% in memory consumption in relation to their respective Springboot version.
 
 
 ## Source code
@@ -86,35 +85,43 @@ While the performance tests are preliminary ... it's amazing! an improvement of 
 In the root of the source code you can see the following projects: 
 
  - quarkus-spring-data-jpa-extension-parent
- - - runtime
- - - deployment
+   - runtime
+   - deployment
  - samples
- - - quarkus-spring-data-jpa-integration-demo (Quarkus + Quarkus Spring Data Jpa Integration)
- - - quarkus-spring-data-jpa-api-demo (Quarkus + Quarkus Spring Data Jpa Api Extension - Panache Impl -)
- - - spring-data-jpa-service (Springboot + Spring Data Jpa)
+   - quarkus-spring-data-jpa-integration-demo (Quarkus + Quarkus Spring Data Jpa Integration)
+   - quarkus-spring-data-jpa-api-demo (Quarkus + Quarkus Spring Data Jpa Api Extension - Panache Impl -)
+   - spring-data-jpa-service (Springboot + Spring Data Jpa)
+ 
  
 ### quarkus-spring-data-jpa-extension-parent
 
 The source of the extension. It contains two modules: runtime and deployment like any other extension.
 In the test folder of the deployment module you can find a complete TestSuite that cover more than 300 tests.
-**Test cases serve as an example of use and testing of almost all the functions offered.**
+
+> **Test cases serve as an example of use and testing of almost all the functions offered.**
+
 
 ### samples
 
 #### quarkus-spring-data-jpa-integration-demo
 
 Demo project with Quarkus v1.6 and the new *Spring Data Jpa Integration* extension which allows to migrate all the services implemented in the SpringBoot project with almost no code changes! (only configuration related changes)!
-**Test cases have been restricted to only those currently supported by Quarkus (Api)**
+
+> **Repositories been restricted to only those currently supported by Quarkus (SD Jpa Api) to perform load tests**
+
 
 #### quarkus-spring-data-jpa-api-demo
 
 Demo project with de default Quarkus v1.6 with the Spring Data Jpa Api provided by Quarkus. 
-**Test cases have been restricted to only those supported by this extension.**
+
+> **Repositories have been restricted to only those supported by this extension.**
+
 
 #### spring-data-jpa-service
 
 SpringBoot project with rest services using Spring Data Jpa.
-**Test cases have been restricted to only those currently supported by Quarkus (Api)**
+
+> **Repositories have been restricted to only those currently supported by Quarkus (SD Jpa Api) to perform load tests**
 
 
 ## Related projects
