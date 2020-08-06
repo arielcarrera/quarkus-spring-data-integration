@@ -8,8 +8,7 @@ Migrate to Quarkus and enjoy a noticeable improvement in performance and memory 
 
 This is an extension that integrate Spring Data Jpa in Quarkus. It's intended to be a first step to migrate large projects or projects that uses features that are not supported by the current Panche Spring Data Jpa Api implementation.
 
-The mission of this project is to allow not only an easy migration of projects based on Spring Boot / Spring Data Jpa, also allow to incorporate in this way the rest of the Spring Data stack projects in less time and in a simpler way to maintain than the current solution adopted.
-Te
+The mission of this project is to allow not only an easy migration of projects based on Spring Boot / Spring Data Jpa, also allow to incorporate in this way other projects of the Spring Data stack in less time and in a simpler way to maintain.
 
 
 ## Supported features
@@ -77,12 +76,12 @@ It is known that the way to generate code for the implementation of Panache (Spr
 
 So this extension aims to allow you to take the first steps... to be able to jump to Quarkus in a simple way! It is literally possible to do it in a few minutes now!
 
-While the performance tests are preliminary... it's amazing! its performance is equal to or greater than the current implementation of Panache's Spring Data Jpa Api but without relegating the features offered by "Spring Data Jpa"! Quarkus with this extension provides an improvement of around 30% in memory consumption in relation to their respective Springboot version.
+While the performance tests are preliminary... it's amazing! its performance is equal to or greater than the current implementation of Panache's Spring Data Jpa Api but without relegating any feature offered by Spring Data Jpa! Quarkus with this extension provides an improvement of around 30% in memory consumption in relation to their respective Springboot version.
 
 
 ## Source code
 
-In the root of the source code you can see the following projects: 
+In the root of the source code you can see the following projects and folders: 
 
  - quarkus-spring-data-jpa-extension-parent
    - runtime
