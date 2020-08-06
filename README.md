@@ -46,6 +46,7 @@ The mission of this project is to allow not only an easy migration of projects b
 - [X] Projections (dtos)
 - [X] Specifications
 - [X] Persistable.isNew or EntityInformation.
+- [X] QueryHints
 
 ## Features supported by "Quarkus Spring Data Jpa Integration" (not supported in Quarkus API implementation - Panache Spring Data Jpa Api -)
 
@@ -56,6 +57,7 @@ The mission of this project is to allow not only an easy migration of projects b
 - [X] Native queries with @Query
 - [X] Named queries with @Query
 - [X] Persistable.isNew or EntityInformation.
+- [X] QueryHints
 - [X] Slice triggers a count query by every slice ([issue](https://github.com/quarkusio/quarkus/issues/9357))
 
 ## Not tested features 
