@@ -81,11 +81,11 @@ While the performance tests are preliminary ... it's amazing! an improvement of 
 
 In the root of the source code you can see the following projects: 
 
- - quarkus-spring-data-jpa-extension-parent
+ - quarkus-spring-data-jpa-extension
  - quarkus-spring-data-jpa-integration-demo
  - spring-data-jpa-service
  
-### quarkus-spring-data-jpa-extension-parent
+### quarkus-spring-data-jpa-extension
 
 The source of the extension.
 In the test folder of the deployment module you can find a complete TestSuite that cover more than 300 tests.
@@ -111,11 +111,6 @@ Quarkus project with the new *Spring Data Jpa Integration* extension which allow
             <id>github</id>
             <name>GitHub Ariel Carrera - Spring Data Commons Packages</name>
             <url>https://maven.pkg.github.com/arielcarrera/spring-data-commons-cdi</url>
-        </repository>
-        <repository>
-            <id>github2</id>
-            <name>GitHub Ariel Carrera - Spring Data Jpa Packages</name>
-            <url>https://maven.pkg.github.com/arielcarrera/spring-data-jpa-cdi</url>
         </repository>
         <repository>
           <id>github3</id>

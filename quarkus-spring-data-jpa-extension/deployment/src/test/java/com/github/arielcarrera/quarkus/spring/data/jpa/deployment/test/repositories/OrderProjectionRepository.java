@@ -11,14 +11,14 @@ public interface OrderProjectionRepository extends Repository<OrderEntity,Intege
 		
 		Integer getId();
 
-		Integer getNumber();
+		Integer getOrderNumber();
 
 		Double getTotal();
 
 	}
 	
-	OrderProjection findByNumber(Integer id);
+	OrderProjection findByOrderNumber(Integer id);
 	
-	OrderDto findDtoByNumber(Integer id);
+	OrderDto findDtoByOrderNumber(Integer id);
 	
 }

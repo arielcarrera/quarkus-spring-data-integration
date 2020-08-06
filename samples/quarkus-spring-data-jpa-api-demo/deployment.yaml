@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: quarkus-spring-data-jpa-api-demo
+  name: quarkus-spring-data-jpa-api-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quarkus-spring-data-jpa-api-demo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: quarkus-spring-data-jpa-api-demo
+    spec:
+      containers:
+      - image: quarkus-spring-data-jpa-api-demo:1.0.0-SNAPSHOT
+        imagePullPolicy: Always
+        name: quarkus-spring-data-jpa-api-demo
+        resources:
+          limits:
+            memory: 2Gi
+            cpu: 4
+          requests:
+            memory: 2Gi
+            cpu: 4
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: quarkus-spring-data-jpa-api-demo
+  name: quarkus-spring-data-jpa-api-demo
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: quarkus-spring-data-jpa-api-demo
+  type: ClusterIP
+status:
+  loadBalancer: {}

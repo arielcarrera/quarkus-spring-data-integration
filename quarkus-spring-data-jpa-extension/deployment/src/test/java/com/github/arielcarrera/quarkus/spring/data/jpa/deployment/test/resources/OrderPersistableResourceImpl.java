@@ -24,7 +24,7 @@ public class OrderPersistableResourceImpl implements OrderPersistableResource {
 	}
 	
 	public OrderDto save(OrderDto entity) {
-		OrderEntity o =  repository.save(new OrderEntity(entity.getId(), entity.getNumber(), entity.getProductId(), "test", 200D));
+		OrderEntity o =  repository.save(new OrderEntity(entity.getId(), entity.getOrderNumber(), entity.getProductId(), "test", 200D));
 		if (o != null) return new OrderDto(o.getId(), o.getOrderNumber(), o.getProductId(), o.getTotal());
 		return null;
 	}
