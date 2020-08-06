@@ -27,6 +27,7 @@ The mission of this project is to allow not only an easy migration of projects b
 - [X] Named queries with @Query
 - [X] QueryByExampleExecutor
 - [X] Custom Repository Interfaces
+- [X] Repository Fragments
 - [X] @Transactional support
 - [X] Enhanced lookup of repository fragments hierarchy
 - [X] @NoRepositoryBean support
