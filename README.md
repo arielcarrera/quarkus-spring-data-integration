@@ -24,6 +24,9 @@ Te
   - [X] Derived count query
   - [X] Derived delete query
   - [X] Derived update query
+- [X] Native queries with @Query
+- [X] Named queries with @Query
+- [X] QueryByExampleExecutor
 - [X] Custom Repository Interfaces
 - [X] @Transactional support
 - [X] Enhanced lookup of repository fragments hierarchy
@@ -35,7 +38,7 @@ Te
 - [X] Returning types (Collections / Iterables)
 - [X] Returning type: Streamable
 - [X] Optional (null handling)
-- [X] Async query result
+- [X] Async query result (ava.util.concurrent.Future as return types)
 - [X] Custom Configuration with MicroProfile Config (quarkus application.properties)
 - [X] Custom Configuration with a given Cdi Repository Configuration Bean
 - [X] Repository Custom Implementation (Impl)
@@ -43,6 +46,7 @@ Te
 - [X] Projections (dtos)
 - [X] Specifications
 - [X] Persistable.isNew or EntityInformation.
+
 
 ## Not tested features 
 
@@ -111,11 +115,6 @@ Quarkus project with the new *Spring Data Jpa Integration* extension which allow
             <id>github</id>
             <name>GitHub Ariel Carrera - Spring Data Commons Packages</name>
             <url>https://maven.pkg.github.com/arielcarrera/spring-data-commons-cdi</url>
-        </repository>
-        <repository>
-            <id>github2</id>
-            <name>GitHub Ariel Carrera - Spring Data Jpa Packages</name>
-            <url>https://maven.pkg.github.com/arielcarrera/spring-data-jpa-cdi</url>
         </repository>
         <repository>
           <id>github3</id>
