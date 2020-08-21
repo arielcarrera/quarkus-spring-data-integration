@@ -1,0 +1,71 @@
+[
+  {
+    "name" : "org.jboss.resteasy.core.ContextParameterInjector$GenericDelegatingProxy",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true,
+    "allDeclaredFields" : true,
+    "allPublicFields" : true
+  },
+  {
+    "name" : "java.lang.Class",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "java.util.Calendar[]",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "java.net.URL[]",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+    "name" : "java.io.File[]",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  },
+  {
+   "name" : "oracle.jdbc.driver.T4CDriverExtension",
+   "allDeclaredConstructors" : true,
+   "allPublicConstructors" : true,
+   "allDeclaredMethods" : true,
+   "allPublicMethods" : true
+  }, {
+    "name" : "org.hibernate.dialect.Oracle8iDialect",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }, {
+    "name" : "org.hibernate.dialect.Oracle10gDialect",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }, {
+    "name" : "oracle.sql.AnyDataFactory"
+  }, {
+    "name" : "oracle.sql.TypeDescriptorFactory"
+  }, {
+    "name" : "oracle.jdbc.driver.OracleDriver",
+    "allDeclaredConstructors" : true,
+    "allPublicConstructors" : true,
+    "allDeclaredMethods" : true,
+    "allPublicMethods" : true
+  }, {
+    "name" : "org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl",
+    "methods" : [{ "name" : "<init>", "parameterTypes" : [] }]
+  }
+]

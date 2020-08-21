@@ -20,7 +20,7 @@
 		<quarkus.platform.version>1.6.1.Final</quarkus.platform.version>
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
 		<version.spring.data.jpa>2.3.2-CDI1</version.spring.data.jpa>
-		<version.spring.data.jpa.extension>1.1</version.spring.data.jpa.extension>
+		<version.spring.data.jpa.extension>1.2-SNAPSHOT</version.spring.data.jpa.extension>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -94,6 +94,26 @@
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-container-image-docker</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-reflect</artifactId>
+			<version>1.2.71</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-stdlib</artifactId>
+			<version>1.2.71</version>
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+		    <groupId>org.jboss.spec.javax.security.jacc</groupId>
+		    <artifactId>jboss-jacc-api_1.5_spec</artifactId>
+		    <version>2.0.0.Final</version>
+		    <scope>compile</scope>
 		</dependency>
 	</dependencies>
 	<build>
@@ -213,6 +233,8 @@
 			</build>
 			<properties>
 				<quarkus.package.type>native</quarkus.package.type>
+				<!-- -H:+PrintAnalysisCallTree -->
+				<quarkus.native.additional-build-args>--report-unsupported-elements-at-runtime,-H:+TraceClassInitialization,--allow-incomplete-classpath,-H:ReflectionConfigurationFiles=reflection-config.json,-H:IncludeResourceBundles=oracle.net.jdbc.nl.mesg.NLSR,-H:includeResourceBundles=oracle.net.mesg.Message,--initialize-at-run-time=org.hibernate.jpa.HibernatePersistenceProvider,--initialize-at-run-time=org.hibernate.secure.internal.StandardJaccServiceImpl,--initialize-at-run-time=oracle.jdbc.driver.BlockSource,--initialize-at-run-time=oracle.jdbc.driver.BlockSource$ThreadedCachingBlockSource$BlockReleaser,--initialize-at-run-time=oracle.jdbc.driver.NamedTypeAccessor$XMLFactory,--initialize-at-run-time=oracle.jdbc.driver.OracleTimeoutThreadPerVM,--initialize-at-run-time=oracle.jdbc.driver.SQLUtil$XMLFactory,--initialize-at-run-time=oracle.net.nt.TimeoutInterruptHandler,--initialize-at-run-time=oracle.sql.LnxLibServer,--initialize-at-run-time=oracle.sql.LoadCorejava</quarkus.native.additional-build-args>
 			</properties>
 		</profile>
 	</profiles>

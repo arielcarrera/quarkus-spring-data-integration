@@ -19,6 +19,8 @@ import org.jboss.jandex.DotName;
 import org.jboss.jandex.IndexView;
 import org.jboss.jandex.Type;
 import org.jboss.logging.Logger;
+import org.springframework.beans.BeanUtils;
+import org.springframework.cglib.core.ReflectUtils;
 import org.springframework.data.domain.Auditable;
 import org.springframework.data.domain.Persistable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -56,6 +58,7 @@ import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.builditem.AdditionalIndexedClassesBuildItem;
 import io.quarkus.deployment.builditem.CombinedIndexBuildItem;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
+import io.quarkus.deployment.builditem.nativeimage.RuntimeInitializedClassBuildItem;
 import io.quarkus.hibernate.orm.deployment.IgnorableNonIndexedClasses;
 import io.quarkus.hibernate.orm.runtime.DefaultEntityManagerProducer;
 import io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorMandatory;
@@ -345,5 +348,16 @@ class QuarkusSpringDataJpaExtensionProcessor {
 					cdiRepositoryConfigurationQualifiers, repositoryTypes, classInfo);
 		}
 	}
+	
+	/**
+	 * Native image support: delay class initialization
+	 * @return
+	 */
+	@BuildStep
+    void delayInitialization(BuildProducer<RuntimeInitializedClassBuildItem> delayInitBuildItem) {
+		delayInitBuildItem.produce(new RuntimeInitializedClassBuildItem("org.springframework.beans.BeanUtils$KotlinDelegate"));
+		delayInitBuildItem.produce(new RuntimeInitializedClassBuildItem("org.springframework.core.io.VfsUtils"));
+//		delayInitBuildItem.produce(new RuntimeInitializedClassBuildItem("org.springframework.cglib.core.ReflectUtils"));
+    }
 
 }
