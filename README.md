@@ -121,14 +121,14 @@ In the test folder of the deployment module you can find a complete TestSuite th
 
 #### quarkus-spring-data-jpa-integration-demo
 
-Demo project with Quarkus v1.6 and the new *Spring Data Jpa Integration* extension which allows to migrate all the services implemented in the SpringBoot project with almost no code changes! (only configuration related changes)!
+Demo project with Quarkus v1.9.2.Final and the new *Spring Data Jpa Integration* extension which allows to migrate all the services implemented in the SpringBoot project with almost no code changes! (only configuration related changes)!
 
 > **Repositories been restricted to only those currently supported by Quarkus (SD Jpa Api) to perform load tests**
 
 
 #### quarkus-spring-data-jpa-api-demo
 
-Demo project with de default Quarkus v1.6 with the Spring Data Jpa Api provided by Quarkus. 
+Demo project with de default Quarkus v1.9.2.Final with the Spring Data Jpa Api provided by Quarkus. 
 
 > **Repositories have been restricted to only those supported by this extension.**
 

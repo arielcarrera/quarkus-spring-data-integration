@@ -19,8 +19,6 @@ import org.jboss.jandex.DotName;
 import org.jboss.jandex.IndexView;
 import org.jboss.jandex.Type;
 import org.jboss.logging.Logger;
-import org.springframework.beans.BeanUtils;
-import org.springframework.cglib.core.ReflectUtils;
 import org.springframework.data.domain.Auditable;
 import org.springframework.data.domain.Persistable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -60,7 +58,6 @@ import io.quarkus.deployment.builditem.CombinedIndexBuildItem;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.RuntimeInitializedClassBuildItem;
 import io.quarkus.hibernate.orm.deployment.IgnorableNonIndexedClasses;
-import io.quarkus.hibernate.orm.runtime.DefaultEntityManagerProducer;
 import io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorMandatory;
 import io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorNever;
 import io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorNotSupported;
@@ -140,9 +137,7 @@ class QuarkusSpringDataJpaExtensionProcessor {
 				CdiRepositoryConfiguration.class,
 				DataJpaRepositoryConfig.class,
 				ClassConverter.class,
-				DefaultCdiRepositoryConfig.class,
-				JPAEntityManagerProvider.class,
-				DefaultEntityManagerProducer.class
+				JPAEntityManagerProvider.class
 				);
 		
 		additionalBeans.produce(builder.build());
@@ -186,15 +181,14 @@ class QuarkusSpringDataJpaExtensionProcessor {
 				DataJpaConfig.class.getName(), DataJpaRepositoryConfig.class.getName(),
 				ClassConverter.class.getName(),
 				DefaultCdiRepositoryConfig.class.getName(),
-				JPAEntityManagerProvider.class.getName(),
-				DefaultEntityManagerProducer.class.getName()
+				JPAEntityManagerProvider.class.getName()
 				));
 	}
 
 	/**
 	 * Step to find all possibles {@link Repository} types
 	 * 
-	 * @param indexItem
+	 * @param indexItemO
 	 * @param repositoryTypesIndex
 	 */
 	@BuildStep
@@ -265,6 +259,7 @@ class QuarkusSpringDataJpaExtensionProcessor {
 		LOGGER.info("looking for entity manager beans");
 		BeanInfo emBean = null;
 		for (BeanInfo bean : context.beans().producers()) {
+			System.out.println("BeanInfo:" + bean.getName() + "," +  bean.getTypes().toString());
 			if (bean.getTypes().contains(Type.create(DotNames.ENTITY_MANAGER, org.jboss.jandex.Type.Kind.CLASS))) {
 				emBean = bean;
 				break;
