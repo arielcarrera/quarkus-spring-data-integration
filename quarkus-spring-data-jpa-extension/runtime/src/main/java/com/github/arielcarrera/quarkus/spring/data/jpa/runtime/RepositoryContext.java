@@ -107,9 +107,13 @@ public class RepositoryContext {
 	 */
 	public Class<?> loadClass(String name) {
 		try {
-			return ClassUtils.forName(name, this.getClass().getClassLoader());
+			return Thread.currentThread().getContextClassLoader().loadClass(name);
 		} catch (ClassNotFoundException e) {
-			throw new UnsatisfiedResolutionException(String.format("Unable to resolve class for name '%s'", name), e);
+			try {
+				return ClassUtils.forName(name, this.getClass().getClassLoader());
+			} catch (ClassNotFoundException e2) {
+				throw new UnsatisfiedResolutionException(String.format("Unable to resolve class for name '%s'", name), e);
+			}
 		}
 	}
 
