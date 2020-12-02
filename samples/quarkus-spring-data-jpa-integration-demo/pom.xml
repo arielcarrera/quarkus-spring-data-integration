@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.arielcarrera.quarkus.spring.data</groupId>
 	<artifactId>quarkus-spring-data-jpa-integration-demo</artifactId>
-	<version>1.1.0-SNAPSHOT</version>
+	<version>1.2.0-SNAPSHOT</version>
 	<properties>
 		<compiler-plugin.version>3.8.1</compiler-plugin.version>
 		<maven.compiler.parameters>true</maven.compiler.parameters>
@@ -19,8 +19,8 @@
 		<quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
 		<quarkus.platform.version>1.6.1.Final</quarkus.platform.version>
 		<surefire-plugin.version>2.22.1</surefire-plugin.version>
-		<version.spring.data.jpa>2.3.2-CDI1</version.spring.data.jpa>
-		<version.spring.data.jpa.extension>1.2-SNAPSHOT</version.spring.data.jpa.extension>
+		<version.spring.data.jpa>2.3.2-CDI2</version.spring.data.jpa>
+		<version.spring.data.jpa.extension>1.2</version.spring.data.jpa.extension>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
